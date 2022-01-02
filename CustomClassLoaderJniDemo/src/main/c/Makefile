@@ -1,5 +1,6 @@
 CC = g++
-JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
+JAVA_HOME:=`/usr/libexec/java_home`
+CPPFLAGS:=-I $(JAVA_HOME)/include -I $(JAVA_HOME)/include/darwin
 
 ifeq ($(shell uname), Darwin)
   LIBLINK    = -dynamiclib
