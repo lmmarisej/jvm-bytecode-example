@@ -66,10 +66,10 @@ public class AgentMain {
         System.out.println("agentmain called");
         inst.addTransformer(new MyClassFileTransformer(), true);
         Class classes[] = inst.getAllLoadedClasses();
-        for (int i = 0; i < classes.length; i++) {
-            if (classes[i].getName().equals("MyTestMain")) {
-                System.out.println("Reloading: " + classes[i].getName());
-                inst.retransformClasses(classes[i]);
+        for (Class aClass : classes) {
+            if (aClass.getName().equals("MyTestMain")) {
+                System.out.println("Reloading: " + aClass.getName());
+                inst.retransformClasses(aClass);
                 break;
             }
         }

@@ -1,6 +1,9 @@
 #include "decrypt.h"
+
 extern "C"
-JNIEXPORT jbyteArray JNICALL
+JNIEXPORT jbyteArray
+
+JNICALL
 Java_me_ya_classloader_MyCustomClassLoader_decryptJni(JNIEnv *env, jclass clazz,
                                                       jbyteArray src_bytes) {
     jbyte *src = env->GetByteArrayElements(src_bytes, 0);

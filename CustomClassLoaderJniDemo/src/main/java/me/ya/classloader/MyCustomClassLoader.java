@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class MyCustomClassLoader extends ClassLoader {
     static {
-        System.load("/Users/arthur/cvt_dev/java/CustomClassLoaderJniDemo/src/main/c/libdecrypt.dylib");
+        System.load("/Users/lmmarise.j/develop/java_web_project_list/jvm-bytecode-book-example/CustomClassLoaderJniDemo/src/main/c/libdecrypt.dylib");
     }
 
     public static native byte[] decryptJni(byte[] bytes);
@@ -23,7 +23,8 @@ public class MyCustomClassLoader extends ClassLoader {
 
     private static byte[] getClassFileBytesInDir(String className) {
         try {
-            return FileUtils.readFileToByteArray(new File("encrypt_classes" + "/" + className + ".class_"));
+            return FileUtils.readFileToByteArray(new File("/Users/lmmarise.j/develop/java_web_project_list/jvm-bytecode-book-example/CustomClassLoaderJniDemo/encrypt_classes/" +
+                    className + ".class_"));
         } catch (IOException e) {
             e.printStackTrace();
         }

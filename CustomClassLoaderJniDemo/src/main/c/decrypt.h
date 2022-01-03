@@ -12,8 +12,10 @@ extern "C" {
  * Method:    decryptJni
  * Signature: ([B)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_me_ya_classloader_MyCustomClassLoader_decryptJni
-  (JNIEnv *, jclass, jbyteArray);
+JNIEXPORT jbyteArray
+
+JNICALL Java_me_ya_classloader_MyCustomClassLoader_decryptJni
+        (JNIEnv *, jclass, jbyteArray);
 
 #ifdef __cplusplus
 }
